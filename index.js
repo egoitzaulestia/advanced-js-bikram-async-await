@@ -9,3 +9,23 @@ async function getImageAndName (pokemon){
     return {name, img}
     
 }
+
+const getRandomPokemon = async (pokemon) => {
+
+    // const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${pokemon}`)
+    const responseIterator = await axios.get(`https://pokeapi.co/api/v2/pokemon`)
+
+    let pokemonList = []
+   
+    const pokemonIterator = responseIterator.data.results;
+    // pokemonIterator.forEach(element => {
+        
+    // });
+
+    // const randomPokemon = response;
+    console.log(pokemonIterator);
+
+    // return randomPokemon
+}
+
+getRandomPokemon()
